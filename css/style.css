@@ -1,0 +1,221 @@
+:root {
+	--main-font-primary: "Montserrat", sans-serif;
+	--main-font-secondary: "Open Sans", sans-serif;
+	--main-color-primary: #ff9f55;
+	--main-color-secondary: #4e83c9;
+	--main-color-tertiary: #464240;
+	--main-color-white: white;
+}
+
+.hue_1 {
+	color: var(--main-color-primary);
+}
+
+.hue_2 {
+	color: var(--main-color-secondary);
+}
+
+.hue_3 {
+	color: var(--main-color-tertiary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--main-font-primary);
+}
+
+a,
+button {
+	font-family: var(--main-font-primary);
+	text-transform: uppercase;
+}
+
+p {
+	font-family: var(--main-font-secondary);
+	color: var(--main-color-tertiary);
+}
+
+#bar_progress {
+	background-color: var(--main-color-primary);
+}
+
+html {
+	font-size: 85%;
+}
+
+#sec_landing {
+	height: 100vh;
+}
+
+#sec_therapy {
+	min-height: 100vh;
+}
+
+#sec_therapy .row {
+	min-height: 100%;
+}
+
+#sec_landing #cont_navbar {
+	height: 75px;
+}
+
+#sec_landing #cont_login {
+	height: calc(100% - 75px);
+	background-position: bottom left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-top: 7%;
+}
+
+#sec_landing #cont_milestone {
+	height: calc(100% - 75px);
+}
+
+/* unvisited link */
+#sec_landing button.btn-primary:link,
+#sec_landing button,
+#sec_landing a.btn-primary:link,
+#sec_landing a,
+#sec_therapy button.btn-primary:link,
+#sec_therapy button {
+	color: var(--main-color-white);
+	background-color: var(--main-color-primary);
+	border-color: var(--main-color-primary);
+	box-shadow: none;
+}
+
+/* visited link */
+#sec_landing button.btn-primary:visited,
+#sec_landing a.btn-primary:visited,
+#sec_therapy button.btn-primary:visited {
+	color: var(--main-color-white);
+	background-color: var(--main-color-primary);
+	border-color: var(--main-color-primary);
+	box-shadow: none;
+}
+
+/* mouse over link */
+#sec_landing button.btn-primary:hover,
+#sec_landing a.btn-primary:hover,
+#sec_therapy button.btn-primary:hover {
+	color: var(--main-color-primary);
+	background-color: var(--main-color-white);
+	border-color: var(--main-color-primary);
+	box-shadow: none;
+}
+
+/* selected link */
+#sec_landing button.btn-primary:active,
+#sec_landing a.btn-primary:active,
+#sec_therapy button.btn-primary:active {
+	color: var(--main-color-primary);
+	background-color: var(--main-color-white);
+	border-color: var(--main-color-primary);
+	box-shadow: none;
+}
+
+#sec_therapy .card {
+	margin-top: 25px;
+	margin-left: 55px;
+	margin-right: 55px;
+	width: 75%;
+	position: relative;
+	text-align: justify;
+}
+
+#sec_therapy .alert {
+	margin-top: 25px;
+	text-align: justify;
+	font-size: 16px;
+}
+
+#sec_therapy .turn-right .card {
+	float: right;
+}
+
+#sec_therapy .turn-left img {
+	position: absolute;
+	top: 0px;
+	left: -55px;
+}
+
+#sec_therapy .turn-right img {
+	position: absolute;
+	top: 0px;
+	right: -55px;
+}
+
+#sec_therapy .card p {
+	margin-bottom: 0px;
+	font-size: 16px;
+}
+
+#sec_therapy .progress {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+#btn_hint {
+	margin-top: 40px;
+}
+
+#sec_therapy .radio-form {
+	font-size: 16px;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 90%;
+	}
+	#cont_login .card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	#sec_landing #cont_login {
+		height: calc(100% - 75px);
+		background-image: url("../assets/SVG/background1.svg");
+		background-position: bottom left;
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-top: 7%;
+	}
+}
+
+@media (min-width: 992px) {
+	#sec_landing #cont_login {
+		padding-top: 1%;
+	}
+}
+
+@media (min-width: 1200px) and (max-height: 900px) {
+	#sec_landing {
+		height: inherit;
+	}
+	#sec_landing #cont_milestone {
+		height: calc(100vh - 75px);
+	}
+}
+
+@media (min-width: 1200px) and (min-height: 900px) {
+	html {
+		font-size: 100%;
+	}
+	#sec_landing #cont_login {
+		padding-top: 7%;
+	}
+	#cont_login:nth-child(1) h2 {
+		width: 80%;
+	}
+	#cont_login:nth-child(2) .card,
+	#cont_login:nth-child(2) h5 {
+		width: 80%;
+		margin-left: 20%;
+	}
+}
