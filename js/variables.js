@@ -4,6 +4,7 @@ var cont_login = document.getElementById("cont_login");
 var cont_milestone = document.getElementById("cont_milestone");
 var sec_landing = document.getElementById("sec_landing");
 var sec_therapy = document.getElementById("sec_therapy");
+var cont_selfreport = document.getElementById("cont_selfreport");
 
 // Buttons
 var btn_export = document.getElementById("btn_export");
@@ -12,6 +13,7 @@ var btn_hint = document.getElementById("btn_hint");
 var btn_submit = document.getElementById("btn_submit");
 var btn_attempt = document.getElementById("btn_attempt");
 var btn_next = document.getElementById("btn_next");
+var btn_question = document.getElementById("btn_question");
 
 // Inputs
 var input_username = document.getElementById("input_username");
@@ -27,6 +29,20 @@ var input_radio1 = document.getElementById("input_radio1");
 var input_radio2 = document.getElementById("input_radio2");
 var input_radio3 = document.getElementById("input_radio3");
 var input_response = document.getElementById("input_response");
+var input_radio_load1 = document.getElementById("input_radio_load1");
+var input_radio_load2 = document.getElementById("input_radio_load2");
+var input_radio_load3 = document.getElementById("input_radio_load3");
+var input_radio_load4 = document.getElementById("input_radio_load4");
+var input_radio_load5 = document.getElementById("input_radio_load5");
+var input_radio_load6 = document.getElementById("input_radio_load6");
+var input_radio_load7 = document.getElementById("input_radio_load7");
+var input_radio_efficacy1 = document.getElementById("input_radio_efficacy1");
+var input_radio_efficacy2 = document.getElementById("input_radio_efficacy2");
+var input_radio_efficacy3 = document.getElementById("input_radio_efficacy3");
+var input_radio_efficacy4 = document.getElementById("input_radio_efficacy4");
+var input_radio_efficacy5 = document.getElementById("input_radio_efficacy5");
+var input_radio_efficacy6 = document.getElementById("input_radio_efficacy6");
+var input_radio_efficacy7 = document.getElementById("input_radio_efficacy7");
 
 // Dynamic content display container
 var text_turn_left = document.getElementById("text_turn_left");
@@ -39,3 +55,4 @@ var text_input_radio1 = document.getElementById("text_input_radio1");
 var text_input_radio2 = document.getElementById("text_input_radio2");
 var text_input_radio3 = document.getElementById("text_input_radio3");
 var bar_progress = document.getElementById("bar_progress");
+var text_questions = document.getElementById("text_questions");

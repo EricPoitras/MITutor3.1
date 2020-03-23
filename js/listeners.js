@@ -19,3 +19,6 @@ btn_next.addEventListener("click", function() {
 document.addEventListener("DOMContentLoaded", event => {
 	get_data_initialize();
 });
+btn_question.addEventListener("click", function() {
+	get_data_selfreport();
+});

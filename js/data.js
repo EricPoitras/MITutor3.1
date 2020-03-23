@@ -11,6 +11,8 @@ var data = {
 	attempt_id: 0,
 	hint_state: "false",
 	progress: 0,
+	efficacy: 0,
+	load: 0,
 	problem: [
 		{
 			left_turn: "left problem 0",
@@ -65,3 +67,5 @@ var data = {
 		}
 	]
 };
+
+// TO DO Add all of the problems and their difficult levels

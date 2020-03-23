@@ -80,6 +80,8 @@ function set_data_answer() {
 	data.response.push(myObj);
 	console.log(data);
 
+	// TO DO: Log data to cloud in google drive and add dashboard to visualize user interactions
+
 	if (evaluation == "correct") {
 		text_alert_success.classList.remove("d-none");
 		btn_next.disabled = false;
@@ -99,9 +101,11 @@ function get_data_attempt() {
 
 function get_data_next() {
 	console.log("get_data_next");
+	// TO DO Add model for estimates of skill mastery using Bayesian equation and parameter values
 	// TO DO Add sequencing algorithm or randomize order of modules and sequence within module
 	data.problem_id = data.problem_id + 1;
 	if (data.problem_id < data.problem.length) {
+		// TO DO Determine whether to assign self-report prior to moving to next problem
 		get_data_current(data.problem_id);
 		set_progressbar();
 	} else {
@@ -177,4 +181,59 @@ function get_data_initialize() {
 	console.log("get_data_initialize");
 	show_landing();
 	set_progressbar();
+}
+
+function show_selfreport() {
+	btn_question.classList.remove("d-none");
+	cont_selfreport.classList.remove("d-none");
+	text_questions.classList.remove("d-none");
+	btn_next.disabled = true;
+}
+
+function hide_selfreport() {
+	btn_question.classList.add("d-none");
+	cont_selfreport.classList.add("d-none");
+	text_questions.classList.add("d-none");
+	btn_next.disabled = false;
+}
+
+function get_data_selfreport() {
+	// Get data for self-efficacy scale
+	if (input_radio_efficacy1.checked == true) {
+		data.efficacy = 1;
+	} else if (input_radio_efficacy2.checked == true) {
+		data.efficacy = 2;
+	} else if (input_radio_efficacy3.checked == true) {
+		data.efficacy = 3;
+	} else if (input_radio_efficacy4.checked == true) {
+		data.efficacy = 4;
+	} else if (input_radio_efficacy5.checked == true) {
+		data.efficacy = 5;
+	} else if (input_radio_efficacy6.checked == true) {
+		data.efficacy = 6;
+	} else if (input_radio_efficacy7.checked == true) {
+		data.efficacy = 7;
+	} else {
+		data.efficacy = "N/A";
+	}
+	// Get data for cognitive load scale
+	if (input_radio_load1.checked == true) {
+		data.load = 1;
+	} else if (input_radio_load2.checked == true) {
+		data.load = 2;
+	} else if (input_radio_load3.checked == true) {
+		data.load = 3;
+	} else if (input_radio_load4.checked == true) {
+		data.load = 4;
+	} else if (input_radio_load5.checked == true) {
+		data.load = 5;
+	} else if (input_radio_load6.checked == true) {
+		data.load = 6;
+	} else if (input_radio_load7.checked == true) {
+		data.load = 7;
+	} else {
+		data.load = "N/A";
+	}
+	// Hide the self report and enable next button
+	hide_selfreport();
 }
