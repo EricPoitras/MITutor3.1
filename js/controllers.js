@@ -1,5 +1,5 @@
 function download_data_json() {
-	console.log("download_data_json");
+	//console.log("download_data_json");
 	var JSONdata = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
 	btn_export.setAttribute("href", "data:" + JSONdata);
 	btn_export.setAttribute("download", "MITutorLog" + Date.now() + ".json");
@@ -12,7 +12,7 @@ function set_data_time() {
 }
 
 function update_data_start() {
-	console.log("update_data_start");
+	//console.log("update_data_start");
 	data.username = input_username.value;
 	set_data_time();
 	if (input_gender1.checked == true) {
@@ -28,19 +28,22 @@ function update_data_start() {
 	data.degree = input_degree.value;
 	data.university = input_university.value;
 	data.gpa = input_gpa.value;
-	console.log(data);
+	//console.log(data);
 	show_therapy();
 }
 
 function get_data_hint() {
-	console.log("get_data_hint");
+	//console.log("get_data_hint");
 	text_alert_warning.classList.remove("d-none");
 	data.hint_state = "true";
-	console.log(data);
+	//console.log(data);
 }
 
 function set_data_answer() {
-	console.log("set_data_answer");
+	// Calculate elapsed time
+	end();
+
+	//console.log("set_data_answer");
 	var answer = "";
 	var evaluation = "";
 
@@ -48,19 +51,19 @@ function set_data_answer() {
 
 	if (data.problem[data.problem_id].type == "categorization") {
 		if (input_radio1.checked == true) {
-			answer = input_radio1.value;
+			answer = text_input_radio1.textContent;
 		} else if (input_radio2.checked == true) {
-			answer = input_radio2.value;
+			answer = text_input_radio2.textContent;
 		} else {
 			answer = "N/A";
 		}
 	} else if (data.problem[data.problem_id].type == "identification") {
 		if (input_radio1.checked == true) {
-			answer = input_radio1.value;
+			answer = text_input_radio1.textContent;
 		} else if (input_radio2.checked == true) {
-			answer = input_radio2.value;
+			answer = text_input_radio2.textContent;
 		} else if (input_radio3.checked == true) {
-			answer = input_radio3.value;
+			answer = text_input_radio3.textContent;
 		} else {
 			answer = "N/A";
 		}
@@ -76,11 +79,19 @@ function set_data_answer() {
 		evaluation = "incorrect";
 	}
 
-	var myObj = { problem: data.problem_id, attempt: data.attempt_id, hint_request: data.hint_state, answer: answer, evaluation: evaluation };
+	var myObj = {
+		problem: data.problem_id,
+		attempt: data.attempt_id,
+		hint_request: data.hint_state,
+		answer: answer,
+		evaluation: evaluation,
+		latency: elapsed_time,
+		skill_component: data.problem[data.problem_id].type
+	};
 	data.response.push(myObj);
-	console.log(data);
+	//console.log(data);
 
-	// TO DO: Log data to cloud in google drive and add dashboard to visualize user interactions
+	log_data();
 
 	if (evaluation == "correct") {
 		text_alert_success.classList.remove("d-none");
@@ -94,13 +105,13 @@ function set_data_answer() {
 }
 
 function get_data_attempt() {
-	console.log("get_data_attempt");
+	//console.log("get_data_attempt");
 	data.attempt_id = data.attempt_id + 1;
 	get_data_current(data.problem_id);
 }
 
 function get_data_next() {
-	console.log("get_data_next");
+	//console.log("get_data_next");
 	// TO DO Add model for estimates of skill mastery using Bayesian equation and parameter values
 	// TO DO Add sequencing algorithm or randomize order of modules and sequence within module
 	data.problem_id = data.problem_id + 1;
@@ -136,6 +147,9 @@ function show_problem_default(problem_type) {
 		text_input_radio3.parentElement.classList.add("d-none");
 		input_response.classList.remove("d-none");
 	}
+
+	// Calculate elapsed time
+	start();
 }
 
 function get_data_current(problem_id) {
@@ -178,7 +192,7 @@ function set_progressbar() {
 }
 
 function get_data_initialize() {
-	console.log("get_data_initialize");
+	//console.log("get_data_initialize");
 	show_landing();
 	set_progressbar();
 }
@@ -236,4 +250,74 @@ function get_data_selfreport() {
 	}
 	// Hide the self report and enable next button
 	hide_selfreport();
+}
+
+function log_data() {
+	var urladress =
+		"https://docs.google.com/forms/d/e/1FAIpQLScKcwBEmMWTg2WyFddAPcukf68s7zn2YpcdRed6iwalYdvLZg/formResponse?" +
+		"entry.751043466=" +
+		String(data.version) +
+		"&entry.1660002356=" +
+		String(data.date) +
+		"&entry.1982419381=" +
+		String(data.timestamp) +
+		"&entry.302730106=" +
+		String(data.username) +
+		"&entry.726087195=" +
+		String(data.gender) +
+		"&entry.460607681=" +
+		String(data.age) +
+		"&entry.2049471901=" +
+		String(data.degree) +
+		"&entry.407565219=" +
+		String(data.university) +
+		"&entry.2109953008=" +
+		String(data.gpa) +
+		"&entry.2019207758=" +
+		String(data.efficacy) +
+		"&entry.1011397270=" +
+		String(data.load) +
+		"&entry.2004072373=" +
+		String(data.response[data.response.length - 1].problem) +
+		"&entry.1012411949=" +
+		String(data.response[data.response.length - 1].attempt) +
+		"&entry.707422152=" +
+		String(data.response[data.response.length - 1].hint_request) +
+		"&entry.1074255750=" +
+		String(data.response[data.response.length - 1].answer) +
+		"&entry.161458003=" +
+		String(data.response[data.response.length - 1].evaluation) +
+		"&entry.1788520980=" +
+		String(data.response[data.response.length - 1].latency) +
+		"&entry.656563908=" +
+		String(data.response[data.response.length - 1].skill_component) +
+		"&submit=Submit";
+	console.log(urladress);
+	// TO DO: Log data to cloud in google drive and add dashboard to visualize user interactions
+	fetch(urladress, {
+		method: "post",
+		mode: "no-cors",
+		headers: {
+			"Content-Type": "application/json"
+		}
+	})
+		.then(response => response.json())
+		.then(data => console.log("data is", data))
+		.catch(error => console.log("error is", error));
+}
+
+// Calculate elapsed time for each activity - start and end time
+function start() {
+	startTime = new Date();
+}
+
+function end() {
+	endTime = new Date();
+	var timeDiff = endTime - startTime; //in ms
+	// strip the ms
+	timeDiff /= 1000;
+
+	// get seconds
+	var seconds = Math.round(timeDiff);
+	elapsed_time = seconds;
 }

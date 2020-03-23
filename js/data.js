@@ -1,4 +1,5 @@
 var data = {
+	version: "MITutor_v3_1_nonadaptive",
 	date: "",
 	timestamp: "",
 	username: "",
@@ -63,9 +64,11 @@ var data = {
 			attempt: "",
 			hint_request: "",
 			answer: "",
-			evaluation: ""
+			evaluation: "",
+			latency: "",
+			skill_component: ""
 		}
 	]
 };
 
-// TO DO Add all of the problems and their difficult levels
+// TO DO Add all of the problems and their difficult levels and skill component

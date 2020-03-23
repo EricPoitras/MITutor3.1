@@ -56,3 +56,6 @@ var text_input_radio2 = document.getElementById("text_input_radio2");
 var text_input_radio3 = document.getElementById("text_input_radio3");
 var bar_progress = document.getElementById("bar_progress");
 var text_questions = document.getElementById("text_questions");
+
+// Global variables to store calculation results
+var startTime, endTime, elapsed_time;
