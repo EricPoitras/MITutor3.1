@@ -293,7 +293,6 @@ function log_data() {
 		String(data.response[data.response.length - 1].skill_component) +
 		"&submit=Submit";
 	console.log(urladress);
-	// TO DO: Log data to cloud in google drive and add dashboard to visualize user interactions
 	fetch(urladress, {
 		method: "post",
 		mode: "no-cors",
