@@ -112,8 +112,11 @@ function get_data_attempt() {
 
 function get_data_next() {
 	//console.log("get_data_next");
-	// TO DO Add model for estimates of skill mastery using Bayesian equation and parameter values
+
 	// TO DO Add sequencing algorithm or randomize order of modules and sequence within module
+
+	// Call the bayesian_model(practice, knowledge, skill, problem) function to return the likelihood of skill mastery
+
 	data.problem_id = data.problem_id + 1;
 	if (data.problem_id < data.problem.length) {
 		// TO DO Determine whether to assign self-report prior to moving to next problem
