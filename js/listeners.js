@@ -22,3 +22,9 @@ document.addEventListener("DOMContentLoaded", event => {
 btn_question.addEventListener("click", function() {
 	get_data_selfreport();
 });
+btn_hint_positive.addEventListener("click", function() {
+	set_hint_rating("positive");
+});
+btn_hint_negative.addEventListener("click", function() {
+	set_hint_rating("negative");
+});

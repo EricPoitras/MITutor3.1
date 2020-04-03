@@ -5,6 +5,7 @@ var cont_milestone = document.getElementById("cont_milestone");
 var sec_landing = document.getElementById("sec_landing");
 var sec_therapy = document.getElementById("sec_therapy");
 var cont_selfreport = document.getElementById("cont_selfreport");
+var cont_hint_rating = document.getElementById("cont_hint_rating");
 
 // Buttons
 var btn_export = document.getElementById("btn_export");
@@ -14,6 +15,8 @@ var btn_submit = document.getElementById("btn_submit");
 var btn_attempt = document.getElementById("btn_attempt");
 var btn_next = document.getElementById("btn_next");
 var btn_question = document.getElementById("btn_question");
+var btn_hint_positive = document.getElementById("btn_hint_positive");
+var btn_hint_negative = document.getElementById("btn_hint_negative");
 
 // Inputs
 var input_username = document.getElementById("input_username");
@@ -59,3 +62,7 @@ var text_questions = document.getElementById("text_questions");
 
 // Global variables to store calculation results
 var startTime, endTime, elapsed_time;
+
+// Global variable to store sequence of modules
+var module_sequence = [];
+var module_completion = 0;

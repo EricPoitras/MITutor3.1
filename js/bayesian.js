@@ -118,8 +118,10 @@ function bayesian_model(practice, knowledge, skill, problem) {
 		}
 	}
 
-	// Calculate likelihood of skill mastery
+	// Calculate likelihood of skill mastery in treatment condition
 	likelihood_mastery = Math.round((pred_correct / (pred_correct + pred_incorrect)) * 100);
 
+	// TO DO: Create a control condition where the likelihood is always 0, and treatment where the actual results are returned from the function
+	likelihood_mastery = 0;
 	return likelihood_mastery;
 }
