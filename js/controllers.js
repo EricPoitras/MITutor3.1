@@ -82,7 +82,7 @@ function set_data_answer() {
 		evaluation: evaluation,
 		latency: elapsed_time,
 		skill_component: data.problem[data.problem_id].type,
-		bkt_model: data.bkt_model
+		bkt_model: data.bkt_model,
 	};
 	data.response.push(myObj);
 
@@ -105,20 +105,19 @@ function set_data_answer() {
 
 function get_data_attempt() {
 	data.attempt_id = data.attempt_id + 1;
-	get_data_current(data.problem_id);
+	get_data_current(sorted_array[data.problem_id].id);
 }
 
 function get_data_next() {
-	// TO DO: Rank order the manner in which problems are presented to students in ascending order of difficulty
-	var input_parameter_problem = (data.problem_id % 12) + 1;
-	var input_parameter_skill;
-	if (data.problem_id == 2) {
+	var input_parameter_problem = sorted_array[data.problem_id].id;
+	var input_parameter_skill = sorted_array[data.problem_id].skill;
+	/*if (data.problem_id == 2) {
 		input_parameter_skill = "categorization";
 	} else if (data.problem_id == 14) {
 		input_parameter_skill = "elaboration";
 	} else {
 		input_parameter_skill = "identification";
-	}
+	}*/
 	var input_parameter_knowledge, count_correct, count_incorrect, count_first_attempt, input_parameter_practice;
 	for (var i = 0; i < data.response.length; i++) {
 		if (data.response[i].evaluation == "correct") {
@@ -146,7 +145,7 @@ function get_data_next() {
 		}
 		data.attempt_id = 0;
 		data.hint_rating = "n/a";
-		get_data_current(data.problem_id);
+		get_data_current(sorted_array[data.problem_id].id);
 		set_progressbar();
 	} else if (data.problem_id == 11 || data.problem_id == 23 || data.problem_id == 35) {
 		module_completion = module_completion + 1;
@@ -159,13 +158,13 @@ function get_data_next() {
 		}
 		data.attempt_id = 0;
 		data.hint_rating = "n/a";
-		get_data_current(data.problem_id);
+		get_data_current(sorted_array[data.problem_id].id);
 		set_progressbar();
 	} else {
 		data.problem_id = data.problem_id + 1;
 		data.attempt_id = 0;
 		data.hint_rating = "n/a";
-		get_data_current(data.problem_id);
+		get_data_current(sorted_array[data.problem_id].id);
 		set_progressbar();
 	}
 }
@@ -241,8 +240,28 @@ function show_therapy() {
 			console.log("error module_sequence definition");
 			break;
 	}
+
+	console.table(model_parameters.problem);
+	array_sort = model_parameters.problem.sort(function (x, y) {
+		return x.incorrect - y.incorrect;
+	});
+	console.table(array_sort);
+	array_sort.forEach(function (item) {
+		if (item.skill == "categorization") {
+			array_sort_categorization.push(item);
+		} else if (item.skill == "elaboration") {
+			array_sort_elaboration.push(item);
+		} else {
+			array_sort_identification.push(item);
+		}
+	});
+	sorted_array = array_sort_categorization.concat(array_sort_elaboration, array_sort_identification);
+	console.table(sorted_array);
+
 	data.problem_id = module_sequence[0];
-	get_data_current(data.problem_id);
+	console.log(module_sequence[0]);
+	console.log(sorted_array[data.problem_id].id);
+	get_data_current(sorted_array[data.problem_id].id);
 }
 
 function show_landing() {
@@ -372,12 +391,12 @@ function log_data() {
 		method: "post",
 		mode: "no-cors",
 		headers: {
-			"Content-Type": "application/json"
-		}
+			"Content-Type": "application/json",
+		},
 	})
-		.then(response => response.json())
-		.then(data => console.log("data is", data))
-		.catch(error => console.log("error is", error));
+		.then((response) => response.json())
+		.then((data) => console.log("data is", data))
+		.catch((error) => console.log("error is", error));
 }
 
 function start() {

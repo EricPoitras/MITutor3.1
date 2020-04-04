@@ -66,3 +66,10 @@ var startTime, endTime, elapsed_time;
 // Global variable to store sequence of modules
 var module_sequence = [];
 var module_completion = 0;
+
+// Algorithm to sort problems in ascending order of difficulty
+var array_sort = [];
+var array_sort_identification = [];
+var array_sort_categorization = [];
+var array_sort_elaboration = [];
+var sorted_array = [];

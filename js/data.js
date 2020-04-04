@@ -18,6 +18,222 @@ var data = {
 	bkt_model: 0,
 	problem: [
 		{
+			left_turn: "Client: I was taking medication for a few days and then I saw you",
+			right_turn: "Therapist: You’ve started treatment",
+			alert_success:
+				"You correctly identified this statement as a simple reflection. “You’ve started treatment” is a straightforward restatement of the first part of what the client said. Little to no meaning has been added. The therapist could have said “You’ve come to see me” and it would be a simple reflection of a different part of the statement.",
+			alert_danger:
+				"This statement is not a complex reflection. “You’ve started treatment” is a straightforward restatement of the first part of what the client said. Little to no meaning has been added. The therapist could have said “You’ve come to see me” and it would be a simple reflection of a different part of the statement.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Simple",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: Yeah, and I guess that makes me feel like a failure",
+			right_turn: "Therapist: It’s almost like nothing ever works out for you",
+			alert_success:
+				"You correctly identified this statement as a complex reflection. “It’s almost like nothing ever works out for you” unpacks the pattern implied in the word ‘failure’ into its own statement. This adds emphasis to a particular part of the client’s statement and directs conversation to further discuss the feeling and/or experience of failure. Alternatively, a simple reflection may have restated the operative word: “Failure.”.",
+			alert_danger:
+				"This statement is not a simple reflection. “It’s almost like nothing ever works out for you” unpacks the pattern implied in the word ‘failure’ into its own statement. This adds emphasis to a particular part of the client’s statement and directs conversation to further discuss the feeling and/or experience of failure. Alternatively, a simple reflection may have restated the operative word: “Failure.”.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Complex",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: Well, I don't think i'm going to be able to get up to work and not have a good feeling or not want to be in the hospital",
+			right_turn: "Therapist: You’re just not sure that you can make it through the day",
+			alert_success:
+				"You correctly identified this statement as a complex reflection. “You’re just not sure that you can make it through the day” synthesizes the theme present in the client’s statement. A simple reflection may have only restated all or part of the client’s statement without adding additional meaning.",
+			alert_danger:
+				"This statement is not a simple reflection. “You’re just not sure that you can make it through the day” synthesizes the theme present in the client’s statement. A simple reflection may have only restated all or part of the client’s statement without adding additional meaning.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Complex",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I just don't want to be lazy like that way anymore",
+			right_turn: "Therapist: You’re tired of feeling lazy",
+			alert_success:
+				"You correctly identified this statement as a simple reflection. “Your tired of feeling lazy” is a simple reflection because it does not add meaningful content to the client’s statement. A complex reflection may have connected the statement to identity (“That’s not who you are”) or inserted emotion (“Being lazy makes you feel bad”), among other possibilities.",
+			alert_danger:
+				"This statement is not a complex reflection. “Your tired of feeling lazy” is a simple reflection because it does not add meaningful content to the client’s statement. A complex reflection may have connected the statement to identity (“That’s not who you are”) or inserted emotion (“Being lazy makes you feel bad”), among other possibilities.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Simple",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I don't want to be a good teacher",
+			right_turn: "Therapist: Being a good teacher is exhausting",
+			alert_success:
+				"You correctly identified this statement as a complex reflection. “Being a good teacher is exhausting” is a complex reflection because it adds a possible underlying emotion to the client’s statement. A simple reflection may have been “The desire isn’t there.”.",
+			alert_danger:
+				"This statement is not a simple reflection. “Being a good teacher is exhausting” is a complex reflection because it adds a possible underlying emotion to the client’s statement. A simple reflection may have been “The desire isn’t there.”.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Complex",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I just need to do something new",
+			right_turn: "Therapist: You’re really bored right now",
+			alert_success:
+				"You correctly identified this statement as a complex reflection. “You’re really bored right now” reflects a possible underlying feeling that may explain the client’s imperative statement. A simple reflection may have been “You need a fresh start” because it does not contribute additional meaning to the client’s statement.",
+			alert_danger:
+				"This statement is not a simple reflection. “You’re really bored right now” reflects a possible underlying feeling that may explain the client’s imperative statement. A simple reflection may have been “You need a fresh start” because it does not contribute additional meaning to the client’s statement.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Complex",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I don't feel like i should be doing this kind of thing",
+			right_turn: "Therapist: It feels like this isn’t something you should do",
+			alert_success:
+				"You correctly identified this statement as a simple reflection. “It feels like this isn’t something you should do” adds no new meaning to the client’s statement. It recycles the client’s own language, like with the words ‘feels’ and ‘should.’ A complex reflection may have deepened the emotional context (“It makes you uncomfortable when you do that”), or carried on the client’s thought (“Because it doesn’t fit with who you are”).",
+			alert_danger:
+				"This statement is not a complex reflection. “It feels like this isn’t something you should do” adds no new meaning to the client’s statement. It recycles the client’s own language, like with the words ‘feels’ and ‘should.’ A complex reflection may have deepened the emotional context (“It makes you uncomfortable when you do that”), or carried on the client’s thought (“Because it doesn’t fit with who you are”).",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Simple",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I want to just go and do it, I’m tired of waiting",
+			right_turn: "Therapist: It seems like you feel ready to get started",
+			alert_success:
+				"You correctly identified this statement as a simple reflection. “It seems you feel ready to get started” restructures the client’s statement without adding new meaning. Both statements relate that the client desires to begin something. A complex reflection may have been “You’re ready to take responsibility for this” because it adds additional context to what it means to ‘go and do it.’.",
+			alert_danger:
+				"This statement is not a complex reflection. “It seems you feel ready to get started” restructures the client’s statement without adding new meaning. Both statements relate that the client desires to begin something. A complex reflection may have been “You’re ready to take responsibility for this” because it adds additional context to what it means to ‘go and do it.’.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Simple",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: It's kind of like I feel that I have a lot of good memories of it and I guess I have to do it",
+			right_turn: "Therapist: It sounds like your memories make you happy",
+			alert_success:
+				"You correctly identified this statement as a complex reflection. “It sounds like your memories make you happy” adds emotional meaning to the client’s statement. A simple reflection may have been “Your memories make you want to do it,” as a more concise rephrasing of the client statement without additional meaning.",
+			alert_danger:
+				"This statement is not a simple reflection. “It sounds like your memories make you happy” adds emotional meaning to the client’s statement. A simple reflection may have been “Your memories make you want to do it,” as a more concise rephrasing of the client statement without additional meaning.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Complex",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I think my parents are alone and they have fights with them and he can't keep living like this",
+			right_turn: "Therapist: Your parent’s are fighting with them",
+			alert_success:
+				"You correctly identified this statement as a simple reflection. “Your parents are fighting with them” restates part of the client’s statement without adding new meaning or context. A complex reflection may have been “You worry about your parents” because it reflects a likely emotion the client is experiencing but left unstated.",
+			alert_danger:
+				"This statement is not a complex reflection. “Your parents are fighting with them” restates part of the client’s statement without adding new meaning or context. A complex reflection may have been “You worry about your parents” because it reflects a likely emotion the client is experiencing but left unstated.",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Simple",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I'm really, really scared about that",
+			right_turn: "Therapist: It sounds like you're scared",
+			alert_success:
+				"You correctly identified this statement as a simple reflection. “It sounds like you’re scared” regurgitates the client’s expression of emotion. For a complex reflection, the therapist may have given the client new language for ‘really, really scared’ (“There’s something unbearable about that”) or used a metaphor (“It’s like there’s a boogeyman in the closet”).",
+			alert_danger:
+				"This statement is not a complex reflection. “It sounds like you’re scared” regurgitates the client’s expression of emotion. For a complex reflection, the therapist may have given the client new language for ‘really, really scared’ (“There’s something unbearable about that”) or used a metaphor (“It’s like there’s a boogeyman in the closet”).",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Simple",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
+			left_turn: "Client: I am going to tell other people i'm going to get a job",
+			right_turn: "Therapist: You’re feeling pretty proud of yourself and want to let other people know",
+			alert_success:
+				"You correctly identified this statement as a complex reflection. “You’re feeling pretty proud of yourself and want to let other people know” adds meaning to the client’s statement by inferring and stating the underlying emotion: pride. A simple reflection would not have added meaning (“You’re going to spread the word”).",
+			alert_danger:
+				"This statement is not a simple reflection. “You’re feeling pretty proud of yourself and want to let other people know” adds meaning to the client’s statement by inferring and stating the underlying emotion: pride. A simple reflection would not have added meaning (“You’re going to spread the word”).",
+			alert_info:
+				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
+			instruction:
+				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
+			type: "categorization",
+			difficulty: "",
+			solution: "Complex",
+			input_radio1: "Simple",
+			input_radio2: "Complex",
+			input_radio3: "",
+		},
+		{
 			left_turn: "Client: It just seems like I don't have a lot of time to do it",
 			right_turn: "Question: What is the thing that’s stopping you?",
 			alert_success:
@@ -33,7 +249,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I can't just go home",
@@ -51,7 +267,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I felt like I was like a little kid because I was like, I am a little bit scared like I was so scared with it",
@@ -69,7 +285,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I don't feel like I want to eat or I want to be with people",
@@ -87,7 +303,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I had a lot of things in my head",
@@ -105,7 +321,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: Well, I don't think I want to be with her. I mean, I mean, I don't know. It's like, well I just hate feeling like that",
@@ -123,7 +339,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I feel like I'm not going to be able to help myself",
@@ -141,7 +357,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I really have a lot of trouble falling asleep",
@@ -159,7 +375,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I got a lot of stuff done, but I know there's something else I want to do",
@@ -177,7 +393,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn:
@@ -196,7 +412,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I'm not that good at what I am doing. I hate that. I feel like it's my own fault.",
@@ -214,7 +430,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: But I think it's because I feel like it isn't really the pressure thing",
@@ -232,7 +448,7 @@ var data = {
 			solution: "",
 			input_radio1: "",
 			input_radio2: "",
-			input_radio3: ""
+			input_radio3: "",
 		},
 		{
 			left_turn: "Client: I’m feeling tired",
@@ -250,7 +466,7 @@ var data = {
 			solution: "You’re just worn out",
 			input_radio1: "You’re just worn out",
 			input_radio2: "How did you sleep last night",
-			input_radio3: "Are you taking your medication"
+			input_radio3: "Are you taking your medication",
 		},
 		{
 			left_turn: "Client: I’m feeling sad",
@@ -268,7 +484,7 @@ var data = {
 			solution: "It seems like you’re feeling pretty down",
 			input_radio1: "What is sad like for you",
 			input_radio2: "It seems like you’re feeling pretty down",
-			input_radio3: "How long have you been feeling this way"
+			input_radio3: "How long have you been feeling this way",
 		},
 		{
 			left_turn: "Client: I’m uhh, feeling, I don’t know, lost",
@@ -286,7 +502,7 @@ var data = {
 			solution: "I wonder if you’re feeling a little stuck, not sure what to do next",
 			input_radio1: "Is this a common feeling",
 			input_radio2: "Lost isn’t a feeling",
-			input_radio3: "I wonder if you’re feeling a little stuck, not sure what to do next"
+			input_radio3: "I wonder if you’re feeling a little stuck, not sure what to do next",
 		},
 		{
 			left_turn: "Client: I don’t know what is happening anymore with my drinking",
@@ -304,7 +520,7 @@ var data = {
 			solution: "I’m hearing that you are worried about how much you drink",
 			input_radio1: "I’m hearing that you are worried about how much you drink",
 			input_radio2: "How much do you drink now",
-			input_radio3: "Did you pass out"
+			input_radio3: "Did you pass out",
 		},
 		{
 			left_turn: "Client: I’m, like, I don’t know what I want to do",
@@ -322,7 +538,7 @@ var data = {
 			solution: "You’re confused",
 			input_radio1: "You’re confused",
 			input_radio2: "Why don’t we do a pro-con list",
-			input_radio3: "Don’t be silly, we can figure this out"
+			input_radio3: "Don’t be silly, we can figure this out",
 		},
 		{
 			left_turn: "Client: I’m feeling really down, depressed",
@@ -340,7 +556,7 @@ var data = {
 			solution: "It's like your in a pit and can’t seem to get out",
 			input_radio1: "Are you taking your meds",
 			input_radio2: "Everyone feels sad sometimes",
-			input_radio3: "It's like your in a pit and can’t seem to get out"
+			input_radio3: "It's like your in a pit and can’t seem to get out",
 		},
 		{
 			left_turn: "Client: I don’t know what I want to do with my life",
@@ -358,7 +574,7 @@ var data = {
 			solution: "It's like your in a pit and can’t seem to get out",
 			input_radio1: "Have you looked at the career information we have in the career center",
 			input_radio2: "Sometimes its feels like you have to make this decision once and for all right now",
-			input_radio3: "Don’t worry, things will work out"
+			input_radio3: "Don’t worry, things will work out",
 		},
 		{
 			left_turn: "Client: I can’t stop thinking about work",
@@ -376,7 +592,7 @@ var data = {
 			solution: "You’re under a lot of pressure right now",
 			input_radio1: "You’re under a lot of pressure right now",
 			input_radio2: "What do you do for work",
-			input_radio3: "Work isn’t everything you know"
+			input_radio3: "Work isn’t everything you know",
 		},
 		{
 			left_turn: "Client: I just, umm, I’m so scared of moving",
@@ -394,7 +610,7 @@ var data = {
 			solution: "You’re comfortable here, it is hard to imagine being happy somewhere else",
 			input_radio1: "You’re comfortable here, it is hard to imagine being happy somewhere else",
 			input_radio2: "Why are you moving",
-			input_radio3: "Moving can be fun, its like a whole new adventure"
+			input_radio3: "Moving can be fun, its like a whole new adventure",
 		},
 		{
 			left_turn: "Client: I can’t keep drinking this much",
@@ -412,7 +628,7 @@ var data = {
 			solution: "You’re worried about your drinking, something needs to change",
 			input_radio1: "You’re worried about your drinking, something needs to change",
 			input_radio2: "How long has this been going on",
-			input_radio3: "What do you like to drink"
+			input_radio3: "What do you like to drink",
 		},
 		{
 			left_turn: "Client: My wife left me",
@@ -430,7 +646,7 @@ var data = {
 			solution: "She’s gone",
 			input_radio1: "I’m so sorry",
 			input_radio2: "What happened",
-			input_radio3: "She’s gone"
+			input_radio3: "She’s gone",
 		},
 		{
 			left_turn: "Client: I got pulled over, but I didn’t do anything wrong",
@@ -448,224 +664,8 @@ var data = {
 			solution: "You’re confused and angry about what happened",
 			input_radio1: "You’re confused and angry about what happened",
 			input_radio2: "What did they pull you over for",
-			input_radio3: "Well, they typically don’t just pull over random people"
+			input_radio3: "Well, they typically don’t just pull over random people",
 		},
-		{
-			left_turn: "Client: I was taking medication for a few days and then I saw you",
-			right_turn: "Therapist: You’ve started treatment",
-			alert_success:
-				"You correctly identified this statement as a simple reflection. “You’ve started treatment” is a straightforward restatement of the first part of what the client said. Little to no meaning has been added. The therapist could have said “You’ve come to see me” and it would be a simple reflection of a different part of the statement.",
-			alert_danger:
-				"This statement is not a complex reflection. “You’ve started treatment” is a straightforward restatement of the first part of what the client said. Little to no meaning has been added. The therapist could have said “You’ve come to see me” and it would be a simple reflection of a different part of the statement.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Simple",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: Yeah, and I guess that makes me feel like a failure",
-			right_turn: "Therapist: It’s almost like nothing ever works out for you",
-			alert_success:
-				"You correctly identified this statement as a complex reflection. “It’s almost like nothing ever works out for you” unpacks the pattern implied in the word ‘failure’ into its own statement. This adds emphasis to a particular part of the client’s statement and directs conversation to further discuss the feeling and/or experience of failure. Alternatively, a simple reflection may have restated the operative word: “Failure.”.",
-			alert_danger:
-				"This statement is not a simple reflection. “It’s almost like nothing ever works out for you” unpacks the pattern implied in the word ‘failure’ into its own statement. This adds emphasis to a particular part of the client’s statement and directs conversation to further discuss the feeling and/or experience of failure. Alternatively, a simple reflection may have restated the operative word: “Failure.”.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Complex",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: Well, I don't think i'm going to be able to get up to work and not have a good feeling or not want to be in the hospital",
-			right_turn: "Therapist: You’re just not sure that you can make it through the day",
-			alert_success:
-				"You correctly identified this statement as a complex reflection. “You’re just not sure that you can make it through the day” synthesizes the theme present in the client’s statement. A simple reflection may have only restated all or part of the client’s statement without adding additional meaning.",
-			alert_danger:
-				"This statement is not a simple reflection. “You’re just not sure that you can make it through the day” synthesizes the theme present in the client’s statement. A simple reflection may have only restated all or part of the client’s statement without adding additional meaning.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Complex",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I just don't want to be lazy like that way anymore",
-			right_turn: "Therapist: You’re tired of feeling lazy",
-			alert_success:
-				"You correctly identified this statement as a simple reflection. “Your tired of feeling lazy” is a simple reflection because it does not add meaningful content to the client’s statement. A complex reflection may have connected the statement to identity (“That’s not who you are”) or inserted emotion (“Being lazy makes you feel bad”), among other possibilities.",
-			alert_danger:
-				"This statement is not a complex reflection. “Your tired of feeling lazy” is a simple reflection because it does not add meaningful content to the client’s statement. A complex reflection may have connected the statement to identity (“That’s not who you are”) or inserted emotion (“Being lazy makes you feel bad”), among other possibilities.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Simple",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I don't want to be a good teacher",
-			right_turn: "Therapist: Being a good teacher is exhausting",
-			alert_success:
-				"You correctly identified this statement as a complex reflection. “Being a good teacher is exhausting” is a complex reflection because it adds a possible underlying emotion to the client’s statement. A simple reflection may have been “The desire isn’t there.”.",
-			alert_danger:
-				"This statement is not a simple reflection. “Being a good teacher is exhausting” is a complex reflection because it adds a possible underlying emotion to the client’s statement. A simple reflection may have been “The desire isn’t there.”.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Complex",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I just need to do something new",
-			right_turn: "Therapist: You’re really bored right now",
-			alert_success:
-				"You correctly identified this statement as a complex reflection. “You’re really bored right now” reflects a possible underlying feeling that may explain the client’s imperative statement. A simple reflection may have been “You need a fresh start” because it does not contribute additional meaning to the client’s statement.",
-			alert_danger:
-				"This statement is not a simple reflection. “You’re really bored right now” reflects a possible underlying feeling that may explain the client’s imperative statement. A simple reflection may have been “You need a fresh start” because it does not contribute additional meaning to the client’s statement.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Complex",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I don't feel like i should be doing this kind of thing",
-			right_turn: "Therapist: It feels like this isn’t something you should do",
-			alert_success:
-				"You correctly identified this statement as a simple reflection. “It feels like this isn’t something you should do” adds no new meaning to the client’s statement. It recycles the client’s own language, like with the words ‘feels’ and ‘should.’ A complex reflection may have deepened the emotional context (“It makes you uncomfortable when you do that”), or carried on the client’s thought (“Because it doesn’t fit with who you are”).",
-			alert_danger:
-				"This statement is not a complex reflection. “It feels like this isn’t something you should do” adds no new meaning to the client’s statement. It recycles the client’s own language, like with the words ‘feels’ and ‘should.’ A complex reflection may have deepened the emotional context (“It makes you uncomfortable when you do that”), or carried on the client’s thought (“Because it doesn’t fit with who you are”).",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Simple",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I want to just go and do it, I’m tired of waiting",
-			right_turn: "Therapist: It seems like you feel ready to get started",
-			alert_success:
-				"You correctly identified this statement as a simple reflection. “It seems you feel ready to get started” restructures the client’s statement without adding new meaning. Both statements relate that the client desires to begin something. A complex reflection may have been “You’re ready to take responsibility for this” because it adds additional context to what it means to ‘go and do it.’.",
-			alert_danger:
-				"This statement is not a complex reflection. “It seems you feel ready to get started” restructures the client’s statement without adding new meaning. Both statements relate that the client desires to begin something. A complex reflection may have been “You’re ready to take responsibility for this” because it adds additional context to what it means to ‘go and do it.’.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Simple",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: It's kind of like I feel that I have a lot of good memories of it and I guess I have to do it",
-			right_turn: "Therapist: It sounds like your memories make you happy",
-			alert_success:
-				"You correctly identified this statement as a complex reflection. “It sounds like your memories make you happy” adds emotional meaning to the client’s statement. A simple reflection may have been “Your memories make you want to do it,” as a more concise rephrasing of the client statement without additional meaning.",
-			alert_danger:
-				"This statement is not a simple reflection. “It sounds like your memories make you happy” adds emotional meaning to the client’s statement. A simple reflection may have been “Your memories make you want to do it,” as a more concise rephrasing of the client statement without additional meaning.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Complex",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I think my parents are alone and they have fights with them and he can't keep living like this",
-			right_turn: "Therapist: Your parent’s are fighting with them",
-			alert_success:
-				"You correctly identified this statement as a simple reflection. “Your parents are fighting with them” restates part of the client’s statement without adding new meaning or context. A complex reflection may have been “You worry about your parents” because it reflects a likely emotion the client is experiencing but left unstated.",
-			alert_danger:
-				"This statement is not a complex reflection. “Your parents are fighting with them” restates part of the client’s statement without adding new meaning or context. A complex reflection may have been “You worry about your parents” because it reflects a likely emotion the client is experiencing but left unstated.",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Simple",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I'm really, really scared about that",
-			right_turn: "Therapist: It sounds like you're scared",
-			alert_success:
-				"You correctly identified this statement as a simple reflection. “It sounds like you’re scared” regurgitates the client’s expression of emotion. For a complex reflection, the therapist may have given the client new language for ‘really, really scared’ (“There’s something unbearable about that”) or used a metaphor (“It’s like there’s a boogeyman in the closet”).",
-			alert_danger:
-				"This statement is not a complex reflection. “It sounds like you’re scared” regurgitates the client’s expression of emotion. For a complex reflection, the therapist may have given the client new language for ‘really, really scared’ (“There’s something unbearable about that”) or used a metaphor (“It’s like there’s a boogeyman in the closet”).",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Simple",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		},
-		{
-			left_turn: "Client: I am going to tell other people i'm going to get a job",
-			right_turn: "Therapist: You’re feeling pretty proud of yourself and want to let other people know",
-			alert_success:
-				"You correctly identified this statement as a complex reflection. “You’re feeling pretty proud of yourself and want to let other people know” adds meaning to the client’s statement by inferring and stating the underlying emotion: pride. A simple reflection would not have added meaning (“You’re going to spread the word”).",
-			alert_danger:
-				"This statement is not a simple reflection. “You’re feeling pretty proud of yourself and want to let other people know” adds meaning to the client’s statement by inferring and stating the underlying emotion: pride. A simple reflection would not have added meaning (“You’re going to spread the word”).",
-			alert_info:
-				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
-			instruction:
-				"Below you will be provided with a series of client statements and therapist reflections. Please categorize whether these reflections are simple or complex.",
-			type: "categorization",
-			difficulty: "",
-			solution: "Complex",
-			input_radio1: "Simple",
-			input_radio2: "Complex",
-			input_radio3: ""
-		}
 	],
 	response: [
 		{
@@ -677,7 +677,7 @@ var data = {
 			evaluation: "",
 			latency: "",
 			skill_component: "",
-			bkt_model: ""
-		}
-	]
+			bkt_model: "",
+		},
+	],
 };
