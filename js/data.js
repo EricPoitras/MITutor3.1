@@ -570,8 +570,8 @@ var data = {
 			instruction:
 				"The following are potential responses to client statements. After reading each client statement pick the therapist statement that is a reflection.",
 			type: "identification",
-			difficulty: "Sometimes its feels like you have to make this decision once and for all right now",
-			solution: "It's like your in a pit and can’t seem to get out",
+			difficulty: "",
+			solution: "Sometimes its feels like you have to make this decision once and for all right now",
 			input_radio1: "Have you looked at the career information we have in the career center",
 			input_radio2: "Sometimes its feels like you have to make this decision once and for all right now",
 			input_radio3: "Don’t worry, things will work out",

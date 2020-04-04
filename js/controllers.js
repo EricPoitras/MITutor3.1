@@ -43,7 +43,7 @@ function set_data_answer() {
 
 	btn_submit.disabled = true;
 
-	if (data.problem[data.problem_id].type == "categorization") {
+	if (data.problem[sorted_array[data.problem_id].id].type == "categorization") {
 		if (input_radio1.checked == true) {
 			answer = text_input_radio1.textContent;
 		} else if (input_radio2.checked == true) {
@@ -51,7 +51,7 @@ function set_data_answer() {
 		} else {
 			answer = "N/A";
 		}
-	} else if (data.problem[data.problem_id].type == "identification") {
+	} else if (data.problem[sorted_array[data.problem_id].id].type == "identification") {
 		if (input_radio1.checked == true) {
 			answer = text_input_radio1.textContent;
 		} else if (input_radio2.checked == true) {
@@ -61,27 +61,28 @@ function set_data_answer() {
 		} else {
 			answer = "N/A";
 		}
+		text_turn_right.textContent = answer;
 	} else {
 		text_turn_right.textContent = input_response.value;
 		answer = input_response.value;
 	}
 	// TO DO: For answers to elaboration, call on API for correction and compare to reflection_simple and reflection_complex
 
-	if (answer == data.problem[data.problem_id].solution) {
+	if (answer == data.problem[sorted_array[data.problem_id].id].solution) {
 		evaluation = "correct";
 	} else {
 		evaluation = "incorrect";
 	}
 
 	var myObj = {
-		problem: data.problem_id,
+		problem: sorted_array[data.problem_id].id,
 		attempt: data.attempt_id,
 		hint_request: data.hint_state,
 		hint_rating: data.hint_rating,
 		answer: answer,
 		evaluation: evaluation,
 		latency: elapsed_time,
-		skill_component: data.problem[data.problem_id].type,
+		skill_component: data.problem[sorted_array[data.problem_id].id].type,
 		bkt_model: data.bkt_model,
 	};
 	data.response.push(myObj);
@@ -173,6 +174,12 @@ function show_problem_default(problem_type) {
 	btn_submit.disabled = false;
 	btn_attempt.disabled = true;
 	btn_next.disabled = true;
+	btn_hint_positive.disabled = false;
+	btn_hint_negative.disabled = false;
+	btn_hint_positive.classList.add("d-inline");
+	btn_hint_negative.classList.add("d-inline");
+	btn_hint_positive.classList.remove("d-none");
+	btn_hint_negative.classList.remove("d-none");
 	text_alert_success.classList.add("d-none");
 	text_alert_danger.classList.add("d-none");
 	text_alert_warning.classList.add("d-none");
@@ -414,4 +421,13 @@ function end() {
 
 function set_hint_rating(rating) {
 	data.hint_rating = rating;
+	if (rating == "positive") {
+		btn_hint_positive.disabled = true;
+		btn_hint_negative.classList.remove("d-inline");
+		btn_hint_negative.classList.add("d-none");
+	} else {
+		btn_hint_negative.disabled = true;
+		btn_hint_positive.classList.remove("d-inline");
+		btn_hint_positive.classList.add("d-none");
+	}
 }
