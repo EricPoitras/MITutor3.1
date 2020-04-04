@@ -237,9 +237,9 @@ var data = {
 			left_turn: "Client: It just seems like I don't have a lot of time to do it",
 			right_turn: "Question: What is the thing that’s stopping you?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You don’t have a lot of time'', or...''You’re worried about doing a good job''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You don’t have a lot of time'', or...''You’re worried about doing a good job''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You don’t have a lot of time'', or...''You’re worried about doing a good job''.",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You don’t have a lot of time'', or...''You’re worried about doing a good job''.",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -255,9 +255,9 @@ var data = {
 			left_turn: "Client: I can't just go home",
 			right_turn: "Question: Why can’t you go home?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You can’t go home'', or... ''Something at home is upsetting you''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You can’t go home'', or... ''Something at home is upsetting you''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You can’t go home'', or... ''Something at home is upsetting you''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You can’t go home'', or... ''Something at home is upsetting you''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -273,9 +273,9 @@ var data = {
 			left_turn: "Client: I felt like I was like a little kid because I was like, I am a little bit scared like I was so scared with it",
 			right_turn: "Question: What feelings do you get when you think about your childhood?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It made you feel powerless'', or... ''That fear sounds overwhelming''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It made you feel powerless'', or... ''That fear sounds overwhelming''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It made you feel powerless'', or... ''That fear sounds overwhelming''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It made you feel powerless'', or... ''That fear sounds overwhelming''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -291,9 +291,9 @@ var data = {
 			left_turn: "Client: I don't feel like I want to eat or I want to be with people",
 			right_turn: "Question: What makes you say that?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You lose your appetite for anything'', or... ''And that’s not like you''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You lose your appetite for anything'', or... ''And that’s not like you''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You lose your appetite for anything'', or... ''And that’s not like you''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You lose your appetite for anything'', or... ''And that’s not like you''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -309,9 +309,9 @@ var data = {
 			left_turn: "Client: I had a lot of things in my head",
 			right_turn: "Question: What sort of things?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''That sounds uncomfortable'', or... ''Thoughts were running wild''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''That sounds uncomfortable'', or... ''Thoughts were running wild''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''That sounds uncomfortable'', or... ''Thoughts were running wild''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''That sounds uncomfortable'', or... ''Thoughts were running wild''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -327,9 +327,9 @@ var data = {
 			left_turn: "Client: Well, I don't think I want to be with her. I mean, I mean, I don't know. It's like, well I just hate feeling like that",
 			right_turn: "Question: How do you feel?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel many ways about her'', or... ''That sounds confusing''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel many ways about her'', or... ''That sounds confusing''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel many ways about her'', or... ''That sounds confusing''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel many ways about her'', or... ''That sounds confusing''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -345,9 +345,9 @@ var data = {
 			left_turn: "Client: I feel like I'm not going to be able to help myself",
 			right_turn: "Question: What’s stopping you from helping yourself?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''Like you’re stuck in a hole that you dug'', or... ''You don’t have confidence in your ability''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''Like you’re stuck in a hole that you dug'', or... ''You don’t have confidence in your ability''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''Like you’re stuck in a hole that you dug'', or... ''You don’t have confidence in your ability''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''Like you’re stuck in a hole that you dug'', or... ''You don’t have confidence in your ability''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -363,9 +363,9 @@ var data = {
 			left_turn: "Client: I really have a lot of trouble falling asleep",
 			right_turn: "Question: How long have you had sleep problems?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You just lie awake'', or... ''So you wake up groggy in the morning''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You just lie awake'', or... ''So you wake up groggy in the morning''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You just lie awake'', or... ''So you wake up groggy in the morning''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You just lie awake'', or... ''So you wake up groggy in the morning''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -381,9 +381,9 @@ var data = {
 			left_turn: "Client: I got a lot of stuff done, but I know there's something else I want to do",
 			right_turn: "Question: What else is there?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It’s like you’re never satisfied'', or... ''You get tense if you take a break''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It’s like you’re never satisfied'', or... ''You get tense if you take a break''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It’s like you’re never satisfied'', or... ''You get tense if you take a break''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''It’s like you’re never satisfied'', or... ''You get tense if you take a break''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -400,9 +400,9 @@ var data = {
 				"Client: I have this feeling that like I can't handle my own life. I really don't feel like i can do anything about it. I would like to have a better relationship with myself.",
 			right_turn: "Question: What sorts of things have been going on?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel a little lost at sea'', or... ''You want to appreciate yourself as a step toward figuring out your life''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel a little lost at sea'', or... ''You want to appreciate yourself as a step toward figuring out your life''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel a little lost at sea'', or... ''You want to appreciate yourself as a step toward figuring out your life''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You feel a little lost at sea'', or... ''You want to appreciate yourself as a step toward figuring out your life''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -418,9 +418,9 @@ var data = {
 			left_turn: "Client: I'm not that good at what I am doing. I hate that. I feel like it's my own fault.",
 			right_turn: "Question: What do you hate about it?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You take the blame'', or... ''That sounds frustrating''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You take the blame'', or... ''That sounds frustrating''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You take the blame'', or... ''That sounds frustrating''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''You take the blame'', or... ''That sounds frustrating''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
@@ -436,9 +436,9 @@ var data = {
 			left_turn: "Client: But I think it's because I feel like it isn't really the pressure thing",
 			right_turn: "Question: Why do you think that you feel pressure?",
 			alert_success:
-				"Our computer model thinks this was a reflection! Good work. Of course, it's just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''The pressure doesn’t get to you'', or... ''You still feel in control''.",
+				"Our computer model thinks this was a reflection! Good work. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''The pressure doesn’t get to you'', or... ''You still feel in control''.",
 			alert_danger:
-				"Our computer does not think this statement was a reflection. Bummer. Of course, its just a machine, so click on the flag above if you think we made an error. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''The pressure doesn’t get to you'', or... ''You still feel in control''",
+				"Our computer does not think this statement was a reflection. In case it's helpful, here are a few examples of other ways you could have responded with reflections: A Reflection might be ''The pressure doesn’t get to you'', or... ''You still feel in control''",
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:

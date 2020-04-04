@@ -35,45 +35,7 @@ function get_data_hint() {
 	data.hint_state = "true";
 }
 
-function set_data_answer() {
-	end();
-
-	var answer = "";
-	var evaluation = "";
-
-	btn_submit.disabled = true;
-
-	if (data.problem[sorted_array[data.problem_id].id].type == "categorization") {
-		if (input_radio1.checked == true) {
-			answer = text_input_radio1.textContent;
-		} else if (input_radio2.checked == true) {
-			answer = text_input_radio2.textContent;
-		} else {
-			answer = "N/A";
-		}
-	} else if (data.problem[sorted_array[data.problem_id].id].type == "identification") {
-		if (input_radio1.checked == true) {
-			answer = text_input_radio1.textContent;
-		} else if (input_radio2.checked == true) {
-			answer = text_input_radio2.textContent;
-		} else if (input_radio3.checked == true) {
-			answer = text_input_radio3.textContent;
-		} else {
-			answer = "N/A";
-		}
-		text_turn_right.textContent = answer;
-	} else {
-		text_turn_right.textContent = input_response.value;
-		answer = input_response.value;
-	}
-	// TO DO: For answers to elaboration, call on API for correction and compare to reflection_simple and reflection_complex
-
-	if (answer == data.problem[sorted_array[data.problem_id].id].solution) {
-		evaluation = "correct";
-	} else {
-		evaluation = "incorrect";
-	}
-
+function score_answer() {
 	var myObj = {
 		problem: sorted_array[data.problem_id].id,
 		attempt: data.attempt_id,
@@ -97,10 +59,106 @@ function set_data_answer() {
 			btn_next.disabled = false;
 			btn_attempt.disabled = true;
 		}
-	} else {
+	} else if (evaluation == "incorrect") {
 		text_alert_danger.classList.remove("d-none");
 		btn_next.disabled = true;
 		btn_attempt.disabled = false;
+	} else {
+		console.log(evaluation);
+		text_alert_success.textContent =
+			"Oops our server seems to be down, so you can go right on ahead. No feedback is available for now, but you're doing great so far, so keep at it.";
+		text_alert_success.classList.remove("d-none");
+		btn_next.disabled = false;
+		btn_attempt.disabled = true;
+	}
+}
+
+function set_data_answer() {
+	end();
+
+	btn_submit.disabled = true;
+
+	if (data.problem[sorted_array[data.problem_id].id].type == "categorization") {
+		// Set Answer
+		if (input_radio1.checked == true) {
+			answer = text_input_radio1.textContent;
+		} else if (input_radio2.checked == true) {
+			answer = text_input_radio2.textContent;
+		} else {
+			answer = "N/A";
+		}
+		// Score Answer
+		if (answer == data.problem[sorted_array[data.problem_id].id].solution) {
+			evaluation = "correct";
+		} else {
+			evaluation = "incorrect";
+		}
+		score_answer();
+	} else if (data.problem[sorted_array[data.problem_id].id].type == "identification") {
+		// Set Answer
+		if (input_radio1.checked == true) {
+			answer = text_input_radio1.textContent;
+		} else if (input_radio2.checked == true) {
+			answer = text_input_radio2.textContent;
+		} else if (input_radio3.checked == true) {
+			answer = text_input_radio3.textContent;
+		} else {
+			answer = "N/A";
+		}
+		text_turn_right.textContent = answer;
+		// Score Answer
+		if (answer == data.problem[sorted_array[data.problem_id].id].solution) {
+			evaluation = "correct";
+		} else {
+			evaluation = "incorrect";
+		}
+		score_answer();
+	} else {
+		// Set Answer
+
+		// Show spinner while waiting for API response
+		cont_api_spinner.classList.remove("d-none");
+
+		// Show response in the avatar speech bubble
+		text_turn_right.textContent = input_response.value;
+		answer = input_response.value;
+
+		var obj_response = { text: answer, speaker: "therapist" };
+
+		// TO DO: For answers to elaboration, call on API for correction and compare to reflection_simple and reflection_complex
+		const fetchPromise = fetch("https://cors-anywhere.herokuapp.com/https://sri.utah.edu/psychtest/modeltestdepth.jsp", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/x-www-form-urlencoded",
+			},
+			body: "jsonobj=" + JSON.stringify(obj_response) + "&function=7101&json=true&nocache=1586001402856",
+		})
+			.then(function (response) {
+				if (response.status >= 200 && response.status <= 299) {
+					return response.json();
+				} else {
+					throw Error(response.statusText);
+				}
+			})
+			.then(function (data) {
+				console.log(data.utterancedsf.bestguess);
+				cont_api_spinner.classList.add("d-none");
+				if (data.utterancedsf.bestguess == "reflection_complex" || data.utterancedsf.bestguess == "reflection_simple") {
+					evaluation = "correct";
+					console.log(evaluation);
+					score_answer();
+				} else {
+					evaluation = "incorrect";
+					console.log(evaluation);
+					score_answer();
+				}
+			})
+			.catch((error) => {
+				// Network error
+				console.log(error);
+				evaluation = "API server error";
+				score_answer();
+			});
 	}
 }
 

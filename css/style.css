@@ -187,6 +187,11 @@ html {
 	z-index: 999;
 }
 
+.fa-spinner {
+	font-size: 40px;
+	color: var(--main-color-primary);
+}
+
 @media (min-width: 576px) {
 }
 

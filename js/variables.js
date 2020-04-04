@@ -6,6 +6,7 @@ var sec_landing = document.getElementById("sec_landing");
 var sec_therapy = document.getElementById("sec_therapy");
 var cont_selfreport = document.getElementById("cont_selfreport");
 var cont_hint_rating = document.getElementById("cont_hint_rating");
+var cont_api_spinner = document.getElementById("cont_api_spinner");
 
 // Buttons
 var btn_export = document.getElementById("btn_export");
@@ -73,3 +74,7 @@ var array_sort_identification = [];
 var array_sort_categorization = [];
 var array_sort_elaboration = [];
 var sorted_array = [];
+
+// Evaluation of answer
+var answer = "";
+var evaluation = "";
