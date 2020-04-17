@@ -63,6 +63,11 @@ function score_answer() {
 		text_alert_danger.classList.remove("d-none");
 		btn_next.disabled = true;
 		btn_attempt.disabled = false;
+	} else if (evaluation == "skip") {
+		text_alert_success.textContent = "Let's move on to the next problem, you're doing great so far, so keep at it.";
+		text_alert_success.classList.remove("d-none");
+		btn_next.disabled = false;
+		btn_attempt.disabled = true;
 	} else {
 		console.log(evaluation);
 		text_alert_success.textContent =
@@ -93,6 +98,10 @@ function set_data_answer() {
 		} else {
 			evaluation = "incorrect";
 		}
+		// Skip if Multiple Attempts - Override the score
+		if (data.attempt_id >= 3) {
+			evaluation = "skip";
+		}
 		score_answer();
 	} else if (data.problem[sorted_array[data.problem_id].id].type == "identification") {
 		// Set Answer
@@ -111,6 +120,10 @@ function set_data_answer() {
 			evaluation = "correct";
 		} else {
 			evaluation = "incorrect";
+		}
+		// Skip if Multiple Attempts - Override the score
+		if (data.attempt_id >= 3) {
+			evaluation = "skip";
 		}
 		score_answer();
 	} else {
@@ -146,10 +159,18 @@ function set_data_answer() {
 				if (data.utterancedsf.bestguess == "reflection_complex" || data.utterancedsf.bestguess == "reflection_simple") {
 					evaluation = "correct";
 					console.log(evaluation);
+					// Skip if Multiple Attempts - Override the score
+					if (data.attempt_id >= 3) {
+						evaluation = "skip";
+					}
 					score_answer();
 				} else {
 					evaluation = "incorrect";
 					console.log(evaluation);
+					// Skip if Multiple Attempts - Override the score
+					if (data.attempt_id >= 3) {
+						evaluation = "skip";
+					}
 					score_answer();
 				}
 			})
@@ -157,6 +178,10 @@ function set_data_answer() {
 				// Network error
 				console.log(error);
 				evaluation = "API server error";
+				// Skip if Multiple Attempts - Override the score
+				if (data.attempt_id >= 3) {
+					evaluation = "skip";
+				}
 				score_answer();
 			});
 	}
