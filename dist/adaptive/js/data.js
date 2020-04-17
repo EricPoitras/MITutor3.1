@@ -1,5 +1,5 @@
 var data = {
-	version: "MITutor_v3_1_development",
+	version: "MITutor_v3_1_adaptive",
 	date: "",
 	timestamp: "",
 	username: "",
