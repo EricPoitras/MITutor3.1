@@ -75,8 +75,8 @@ function bayesian_model(practice, knowledge, skill, problem) {
 	pred_incorrect = model_parameters.prior_probability.incorrect;
 
 	// Calculate for feedback
-	pred_correct = model_parameters.feedback.correct * pred_correct;
-	pred_incorrect = model_parameters.feedback.incorrect * pred_incorrect;
+	pred_correct = model_parameters.feedback.correct_explanatory * pred_correct;
+	pred_incorrect = model_parameters.feedback.incorrect_explanatory * pred_incorrect;
 
 	// Calculate for practice
 	pred_correct =
@@ -87,6 +87,8 @@ function bayesian_model(practice, knowledge, skill, problem) {
 		(1 / (Math.sqrt(2 * Math.PI) * model_parameters.practice.incorrect_std)) *
 		Math.pow(Math.E, -Math.pow(practice - model_parameters.practice.incorrect_mean, 2) / (2 * Math.pow(model_parameters.practice.incorrect_std, 2))) *
 		pred_incorrect;
+	console.log("Practice is set to:" + practice);
+	console.log("Prediction correct equal to:" + pred_correct);
 
 	// Calculate for knowledge
 	pred_correct =

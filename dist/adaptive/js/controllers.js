@@ -80,7 +80,7 @@ function score_answer() {
 
 function set_data_answer() {
 	end();
-
+	console.log("Attempt number is: " + data.attempt_id);
 	btn_submit.disabled = true;
 
 	if (data.problem[sorted_array[data.problem_id].id].type == "categorization") {
@@ -128,7 +128,7 @@ function set_data_answer() {
 		score_answer();
 	} else {
 		// Set Answer
-
+		var attempt_Count = data.attempt_id;
 		// Show spinner while waiting for API response
 		cont_api_spinner.classList.remove("d-none");
 
@@ -157,30 +157,32 @@ function set_data_answer() {
 				console.log(data.utterancedsf.bestguess);
 				cont_api_spinner.classList.add("d-none");
 				if (data.utterancedsf.bestguess == "reflection_complex" || data.utterancedsf.bestguess == "reflection_simple") {
-					evaluation = "correct";
-					console.log(evaluation);
 					// Skip if Multiple Attempts - Override the score
-					if (data.attempt_id >= 3) {
+					if (attempt_Count >= 3) {
 						evaluation = "skip";
+					} else {
+						evaluation = "correct";
 					}
+					console.log(evaluation);
 					score_answer();
 				} else {
-					evaluation = "incorrect";
-					console.log(evaluation);
-					// Skip if Multiple Attempts - Override the score
-					if (data.attempt_id >= 3) {
+					if (attempt_Count >= 3) {
 						evaluation = "skip";
+					} else {
+						evaluation = "incorrect";
 					}
+					console.log(evaluation);
 					score_answer();
 				}
 			})
 			.catch((error) => {
 				// Network error
 				console.log(error);
-				evaluation = "API server error";
 				// Skip if Multiple Attempts - Override the score
-				if (data.attempt_id >= 3) {
+				if (attempt_Count >= 3) {
 					evaluation = "skip";
+				} else {
+					evaluation = "API server error";
 				}
 				score_answer();
 			});
@@ -202,7 +204,11 @@ function get_data_next() {
 	} else {
 		input_parameter_skill = "identification";
 	}*/
-	var input_parameter_knowledge, count_correct, count_incorrect, count_first_attempt, input_parameter_practice;
+	var input_parameter_knowledge,
+		count_correct = 0,
+		count_incorrect = 0,
+		count_first_attempt = 0,
+		input_parameter_practice;
 	for (var i = 0; i < data.response.length; i++) {
 		if (data.response[i].evaluation == "correct") {
 			count_correct = count_correct + 1;
@@ -216,8 +222,10 @@ function get_data_next() {
 	}
 	input_parameter_knowledge = count_correct / (count_correct + count_incorrect);
 	input_parameter_practice = count_first_attempt;
+	console.log("Input to practice parameter is set to:" + input_parameter_practice);
 	var likelihood_skill_mastery = bayesian_model(input_parameter_practice, input_parameter_knowledge, input_parameter_skill, input_parameter_problem);
 	data.bkt_model = likelihood_skill_mastery;
+	console.log("BKT model output equal to:" + data.bkt_model);
 
 	if (data.problem_id == 2 || data.problem_id == 14 || data.problem_id == 26) {
 		if (likelihood_skill_mastery <= 0.33) {

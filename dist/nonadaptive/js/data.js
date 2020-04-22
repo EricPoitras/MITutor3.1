@@ -460,7 +460,7 @@ var data = {
 			alert_info:
 				"Simple reflections add little or no meaning to what the client said. The therapist simply alters what a client says. Complex reflections provides understanding for the client's situation. The therapist reflects the client's feelings, autonomy, control and ability to make their own decisions. ",
 			instruction:
-				"The following are potential responses to client statements. After reading each client statement <strong>pick the therapist statement that is a reflection.",
+				"The following are potential responses to client statements. After reading each client statement pick the therapist statement that is a reflection.",
 			type: "identification",
 			difficulty: "",
 			solution: "You’re just worn out",
@@ -667,17 +667,5 @@ var data = {
 			input_radio3: "Well, they typically don’t just pull over random people",
 		},
 	],
-	response: [
-		{
-			problem: "",
-			attempt: "",
-			hint_request: "",
-			hint_rating: "",
-			answer: "",
-			evaluation: "",
-			latency: "",
-			skill_component: "",
-			bkt_model: "",
-		},
-	],
+	response: [],
 };
