@@ -228,11 +228,11 @@ function get_data_next() {
 	console.log("BKT model output equal to:" + data.bkt_model);
 
 	if (data.problem_id == 2 || data.problem_id == 14 || data.problem_id == 26) {
-		if (likelihood_skill_mastery <= 0.33) {
+		if (likelihood_skill_mastery <= 33) {
 			data.problem_id = data.problem_id + 1;
-		} else if (likelihood_skill_mastery > 0.33 && likelihood_skill_mastery <= 0.66) {
+		} else if (likelihood_skill_mastery > 33 && likelihood_skill_mastery <= 66) {
 			data.problem_id = data.problem_id + 4;
-		} else if (likelihood_skill_mastery > 0.66) {
+		} else if (likelihood_skill_mastery > 66) {
 			data.problem_id = data.problem_id + 7;
 		}
 		data.attempt_id = 0;
