@@ -420,6 +420,106 @@ function get_data_selfreport() {
 	} else {
 		data.efficacy = "N/A";
 	}
+
+	if(input_eff1_1.checked == true){
+		data.efficacy1 = 1;
+	}else if(input_eff2_1.checked == true){
+		data.efficacy1 = 2;
+	}else if(input_eff3_1.checked == true){
+		data.efficacy1 = 3;
+	}else if(input_eff4_1.checked == true){
+		data.efficacy1 = 4;
+	}else if(input_eff5_1.checked == true){
+		data.efficacy1 = 5;
+	}else{
+		data.efficacy1 = "N/A";
+	}
+
+	if(input_eff1_2.checked == true){
+		data.efficacy2 = 1;
+	}else if(input_eff2_2.checked == true){
+		data.efficacy2 = 2;
+	}else if(input_eff3_2.checked == true){
+		data.efficacy2 = 3;
+	}else if(input_eff4_2.checked == true){
+		data.efficacy2 = 4;
+	}else if(input_eff5_2.checked == true){
+		data.efficacy2 = 5;
+	}else{
+		data.efficacy2 = "N/A";
+	}
+
+	if(input_eff1_3.checked == true){
+		data.efficacy3 = 1;
+	}else if(input_eff2_3.checked == true){
+		data.efficacy3 = 2;
+	}else if(input_eff3_3.checked == true){
+		data.efficacy3 = 3;
+	}else if(input_eff4_3.checked == true){
+		data.efficacy3 = 4;
+	}else if(input_eff5_3.checked == true){
+		data.efficacy3 = 5;
+	}else{
+		data.efficacy3 = "N/A";
+	}
+
+	if(input_eff1_4.checked == true){
+		data.efficacy4 = 1;
+	}else if(input_eff2_4.checked == true){
+		data.efficacy4 = 2;
+	}else if(input_eff3_4.checked == true){
+		data.efficacy4 = 3;
+	}else if(input_eff4_4.checked == true){
+		data.efficacy4 = 4;
+	}else if(input_eff5_4.checked == true){
+		data.efficacy4 = 5;
+	}else{
+		data.efficacy4 = "N/A";
+	}
+
+	if(input_eff1_5.checked == true){
+		data.efficacy5 = 1;
+	}else if(input_eff2_5.checked == true){
+		data.efficacy5 = 2;
+	}else if(input_eff3_5.checked == true){
+		data.efficacy5 = 3;
+	}else if(input_eff4_5.checked == true){
+		data.efficacy5 = 4;
+	}else if(input_eff5_5.checked == true){
+		data.efficacy5 = 5;
+	}else{
+		data.efficacy5 = "N/A";
+	}
+
+	if(input_eff1_6.checked == true){
+		data.efficacy6 = 1;
+	}else if(input_eff2_6.checked == true){
+		data.efficacy6 = 2;
+	}else if(input_eff3_6.checked == true){
+		data.efficacy6 = 3;
+	}else if(input_eff4_6.checked == true){
+		data.efficacy6 = 4;
+	}else if(input_eff5_6.checked == true){
+		data.efficacy6 = 5;
+	}else{
+		data.efficacy6 = "N/A";
+	}
+
+	if(input_eff1_7.checked == true){
+		data.efficacy7 = 1;
+	}else if(input_eff2_7.checked == true){
+		data.efficacy7 = 2;
+	}else if(input_eff3_7.checked == true){
+		data.efficacy7 = 3;
+	}else if(input_eff4_7.checked == true){
+		data.efficacy7 = 4;
+	}else if(input_eff5_7.checked == true){
+		data.efficacy7 = 5;
+	}else{
+		data.efficacy7 = "N/A";
+	}
+
+
 	if (input_radio_load1.checked == true) {
 		data.load = 1;
 	} else if (input_radio_load2.checked == true) {
@@ -437,6 +537,267 @@ function get_data_selfreport() {
 	} else {
 		data.load = "N/A";
 	}
+
+	if(input_l1_1.checked == true){
+		data.load1 = 0;
+	}else if(input_l1_2.checked == true){
+		data.load1 = 1;
+	}else if(input_l1_3.checked == true){
+		data.load1 = 2;
+	}else if(input_l1_4.checked == true){
+		data.load1 = 3;
+	}else if(input_l1_5.checked == true){
+		data.load1 = 4;
+	}else if(input_l1_6.checked == true){
+		data.load1 = 5;
+	}else if(input_l1_7.checked == true){
+		data.load1 = 6;
+	}else if(input_l1_8.checked == true){
+		data.load1 = 7;
+	}else if(input_l1_9.checked == true){
+		data.load1 = 8;
+	}else if(input_l1_10.checked == true){
+		data.load1 = 9;
+	}else if(input_l1_11.checked == true){
+		data.load1 = 10;
+	}else{
+		data.load1 = "N/A";
+	}
+
+	if(input_l2_1.checked == true){
+		data.load2 = 0;
+	}else if(input_l2_2.checked == true){
+		data.load2 = 1;
+	}else if(input_l2_3.checked == true){
+		data.load2 = 2;
+	}else if(input_l2_4.checked == true){
+		data.load2 = 3;
+	}else if(input_l2_5.checked == true){
+		data.load2 = 4;
+	}else if(input_l2_6.checked == true){
+		data.load2 = 5;
+	}else if(input_l2_7.checked == true){
+		data.load2 = 6;
+	}else if(input_l2_8.checked == true){
+		data.load2 = 7;
+	}else if(input_l2_9.checked == true){
+		data.load2 = 8;
+	}else if(input_l2_10.checked == true){
+		data.load2 = 9;
+	}else if(input_l2_11.checked == true){
+		data.load2 = 10;
+	}else{
+		data.load2 = "N/A";
+	}
+
+	if(input_l3_1.checked == true){
+		data.load3 = 0;
+	}else if(input_l3_2.checked == true){
+		data.load3 = 1;
+	}else if(input_l3_3.checked == true){
+		data.load3 = 2;
+	}else if(input_l3_4.checked == true){
+		data.load3 = 3;
+	}else if(input_l3_5.checked == true){
+		data.load3 = 4;
+	}else if(input_l3_6.checked == true){
+		data.load3 = 5;
+	}else if(input_l3_7.checked == true){
+		data.load3 = 6;
+	}else if(input_l3_8.checked == true){
+		data.load3 = 7;
+	}else if(input_l3_9.checked == true){
+		data.load3 = 8;
+	}else if(input_l3_10.checked == true){
+		data.load3 = 9;
+	}else if(input_l3_11.checked == true){
+		data.load3 = 10;
+	}else{
+		data.load3 = "N/A";
+	}
+	
+	if(input_l4_1.checked == true){
+		data.load4 = 0;
+	}else if(input_l4_2.checked == true){
+		data.load4 = 1;
+	}else if(input_l4_3.checked == true){
+		data.load4 = 2;
+	}else if(input_l4_4.checked == true){
+		data.load4 = 3;
+	}else if(input_l4_5.checked == true){
+		data.load4 = 4;
+	}else if(input_l4_6.checked == true){
+		data.load4 = 5;
+	}else if(input_l4_7.checked == true){
+		data.load4 = 6;
+	}else if(input_l4_8.checked == true){
+		data.load4 = 7;
+	}else if(input_l4_9.checked == true){
+		data.load4 = 8;
+	}else if(input_l4_10.checked == true){
+		data.load4 = 9;
+	}else if(input_l4_11.checked == true){
+		data.load4 = 10;
+	}else{
+		data.load4 = "N/A";
+	}
+
+	if(input_l5_1.checked == true){
+		data.load5 = 0;
+	}else if(input_l5_2.checked == true){
+		data.load5 = 1;
+	}else if(input_l5_3.checked == true){
+		data.load5 = 2;
+	}else if(input_l5_4.checked == true){
+		data.load5 = 3;
+	}else if(input_l5_5.checked == true){
+		data.load5 = 4;
+	}else if(input_l5_6.checked == true){
+		data.load5 = 5;
+	}else if(input_l5_7.checked == true){
+		data.load5 = 6;
+	}else if(input_l5_8.checked == true){
+		data.load5 = 7;
+	}else if(input_l5_9.checked == true){
+		data.load5 = 8;
+	}else if(input_l5_10.checked == true){
+		data.load5 = 9;
+	}else if(input_l5_11.checked == true){
+		data.load5 = 10;
+	}else{
+		data.load5 = "N/A";
+	}
+
+	if(input_l6_1.checked == true){
+		data.load6 = 0;
+	}else if(input_l6_2.checked == true){
+		data.load6 = 1;
+	}else if(input_l6_3.checked == true){
+		data.load6 = 2;
+	}else if(input_l6_4.checked == true){
+		data.load6 = 3;
+	}else if(input_l6_5.checked == true){
+		data.load6 = 4;
+	}else if(input_l6_6.checked == true){
+		data.load6 = 5;
+	}else if(input_l6_7.checked == true){
+		data.load6 = 6;
+	}else if(input_l6_8.checked == true){
+		data.load6 = 7;
+	}else if(input_l6_9.checked == true){
+		data.load6 = 8;
+	}else if(input_l6_10.checked == true){
+		data.load6 = 9;
+	}else if(input_l6_11.checked == true){
+		data.load6 = 10;
+	}else{
+		data.load6 = "N/A";
+	}
+
+	if(input_l7_1.checked == true){
+		data.load7 = 0;
+	}else if(input_l7_2.checked == true){
+		data.load7 = 1;
+	}else if(input_l7_3.checked == true){
+		data.load7 = 2;
+	}else if(input_l7_4.checked == true){
+		data.load7 = 3;
+	}else if(input_l7_5.checked == true){
+		data.load7 = 4;
+	}else if(input_l7_6.checked == true){
+		data.load7 = 5;
+	}else if(input_l7_7.checked == true){
+		data.load7 = 6;
+	}else if(input_l7_8.checked == true){
+		data.load7 = 7;
+	}else if(input_l7_9.checked == true){
+		data.load7 = 8;
+	}else if(input_l7_10.checked == true){
+		data.load7 = 9;
+	}else if(input_l7_11.checked == true){
+		data.load7 = 10;
+	}else{
+		data.load7 = "N/A";
+	}
+
+	if(input_l8_1.checked == true){
+		data.load8 = 0;
+	}else if(input_l8_2.checked == true){
+		data.load8 = 1;
+	}else if(input_l8_3.checked == true){
+		data.load8 = 2;
+	}else if(input_l8_4.checked == true){
+		data.load8 = 3;
+	}else if(input_l8_5.checked == true){
+		data.load8 = 4;
+	}else if(input_l8_6.checked == true){
+		data.load8 = 5;
+	}else if(input_l8_7.checked == true){
+		data.load8 = 6;
+	}else if(input_l8_8.checked == true){
+		data.load8 = 7;
+	}else if(input_l8_9.checked == true){
+		data.load8 = 8;
+	}else if(input_l8_10.checked == true){
+		data.load8 = 9;
+	}else if(input_l8_11.checked == true){
+		data.load8 = 10;
+	}else{
+		data.load8 = "N/A";
+	}
+
+	if(input_l9_1.checked == true){
+		data.load9 = 0;
+	}else if(input_l9_2.checked == true){
+		data.load9 = 1;
+	}else if(input_l9_3.checked == true){
+		data.load9 = 2;
+	}else if(input_l9_4.checked == true){
+		data.load9 = 3;
+	}else if(input_l9_5.checked == true){
+		data.load9 = 4;
+	}else if(input_l9_6.checked == true){
+		data.load9 = 5;
+	}else if(input_l9_7.checked == true){
+		data.load9 = 6;
+	}else if(input_l9_8.checked == true){
+		data.load9 = 7;
+	}else if(input_l9_9.checked == true){
+		data.load9 = 8;
+	}else if(input_l9_10.checked == true){
+		data.load9 = 9;
+	}else if(input_l9_11.checked == true){
+		data.load9 = 10;
+	}else{
+		data.load9 = "N/A";
+	}
+
+	if(input_l10_1.checked == true){
+		data.load10 = 0;
+	}else if(input_l10_2.checked == true){
+		data.load10 = 1;
+	}else if(input_l10_3.checked == true){
+		data.load10 = 2;
+	}else if(input_l10_4.checked == true){
+		data.load10 = 3;
+	}else if(input_l10_5.checked == true){
+		data.load10 = 4;
+	}else if(input_l10_6.checked == true){
+		data.load10 = 5;
+	}else if(input_l10_7.checked == true){
+		data.load10 = 6;
+	}else if(input_l10_8.checked == true){
+		data.load10 = 7;
+	}else if(input_l10_9.checked == true){
+		data.load10 = 8;
+	}else if(input_l10_10.checked == true){
+		data.load10 = 9;
+	}else if(input_l10_11.checked == true){
+		data.load10 = 10;
+	}else{
+		data.load10 = "N/A";
+	}
+
 	hide_selfreport();
 }
 
@@ -483,6 +844,40 @@ function log_data() {
 		String(data.response[data.response.length - 1].hint_rating) +
 		"&entry.1766958237=" +
 		String(data.response[data.response.length - 1].bkt_model) +
+		"&entry.1693845462=" +
+		String(data.load1) +
+		"&entry.989687477=" +
+		String(data.load2) +
+		"&entry.222572180=" +
+		String(data.load3) +
+		"&entry.523826681=" +
+		String(data.load4) +
+		"&entry.409556227=" +
+		String(data.load5) +
+		"&entry.1588663364=" +
+		String(data.load6) +
+		"&entry.217834266=" +
+		String(data.load7) +
+		"&entry.745096518=" +
+		String(data.load8) +
+		"&entry.1425795589=" +
+		String(data.load9) +
+		"&entry.304286743=" +
+		String(data.load10) +
+		"&entry.1206752179=" +
+		String(data.efficacy1) +
+		"&entry.1054427308=" +
+		String(data.efficacy2) +
+		"&entry.1141504292=" +
+		String(data.efficacy3) +
+		"&entry.1088756604=" +
+		String(data.efficacy4) +
+		"&entry.1506855647=" +
+		String(data.efficacy5) +
+		"&entry.1523475187=" +
+		String(data.efficacy6) +
+		"&entry.2080936167=" +
+		String(data.efficacy7) +
 		"&submit=Submit";
 	console.log(urladress);
 	fetch(urladress, {
