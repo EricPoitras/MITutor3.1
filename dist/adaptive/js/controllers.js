@@ -139,7 +139,7 @@ function set_data_answer() {
 		var obj_response = { text: answer, speaker: "therapist" };
 
 		// TO DO: For answers to elaboration, call on API for correction and compare to reflection_simple and reflection_complex
-		const fetchPromise = fetch("https://cors-anywhere.herokuapp.com/https://sri.utah.edu/psychtest/modeltestdepth.jsp", {
+		const fetchPromise = fetch("https://cors-anywhere.herokuapp.com/http://airation.trivergia.com:8080/psychtest/modeltestdepth.jsp", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/x-www-form-urlencoded",
