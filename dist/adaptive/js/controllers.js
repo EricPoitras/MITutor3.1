@@ -178,6 +178,7 @@ function set_data_answer() {
 			.catch((error) => {
 				// Network error
 				console.log(error);
+				cont_api_spinner.classList.add("d-none");
 				// Skip if Multiple Attempts - Override the score
 				if (attempt_Count >= 3) {
 					evaluation = "skip";
